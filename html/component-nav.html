@@ -1,6 +1,7 @@
 <!-- component: nav -->
 <nav class="site-nav" data-component="nav" role="navigation" aria-label="Main navigation">
-  <ul>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+  <ul id="nav-list">
     <li><a href="#" aria-current="page">Home</a></li>
     <li><a href="#">About</a></li>
     <li><a href="#">Contact</a></li>
@@ -8,5 +9,18 @@
   <style>
     .site-nav ul{display:flex;gap:1rem;list-style:none;padding:0;margin:0}
     .site-nav a{text-decoration:none;color:#0b74de}
+    .nav-toggle{display:none}
+    @media(max-width:640px){.site-nav ul{display:none}.nav-toggle{display:inline-block}}
   </style>
+  <script>
+    (function(){
+      var btn=document.currentScript.previousElementSibling.querySelector('.nav-toggle');
+      var list=document.getElementById('nav-list');
+      btn.addEventListener('click',function(){
+        var expanded=btn.getAttribute('aria-expanded')==='true';
+        btn.setAttribute('aria-expanded',!expanded);
+        list.style.display=expanded?'none':'flex';
+      });
+    })();
+  </script>
 </nav>
