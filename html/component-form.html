@@ -1,7 +1,13 @@
 <!-- component: form -->
 <form class="form" data-component="form" aria-label="Contact form">
+  <label for="name">Name</label><br>
+  <input id="name" name="name" type="text" placeholder="Your name" required>
+  <br>
+  <label for="email">Email</label><br>
+  <input id="email" name="email" type="email" placeholder="you@example.com" required>
+  <br>
   <label>Message<br>
-    <textarea rows="3" placeholder="Write a message"></textarea>
+    <textarea id="message" name="message" rows="3" placeholder="Write a message"></textarea>
   </label>
   <br>
   <button type="submit">Send</button>
