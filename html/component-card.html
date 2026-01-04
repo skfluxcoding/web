@@ -1,10 +1,19 @@
 <!-- component: card -->
 <article class="card" data-component="card" role="article" aria-label="Card: Card Title">
-  <h3>Card Title</h3>
+  <figure>
+    <img src="/assets/card-placeholder.jpg" alt="Card image" width="320" height="180">
+    <figcaption>
+      <h3>Card Title</h3>
+      <p class="meta">Category • Jan 2026</p>
+    </figcaption>
+  </figure>
   <p>Brief description inside a reusable card component.</p>
   <a href="#">Read more</a>
   <style>
     .card{border:1px solid #e3e3e3;padding:1rem;border-radius:8px;max-width:320px}
+    .card figure{margin:0 0 .5rem}
+    .card img{width:100%;height:auto;border-radius:6px}
+    .card .meta{font-size:.85rem;color:#666;margin:.25rem 0}
     .card a{color:#0b74de;text-decoration:none}
   </style>
 </article>
