@@ -10,3 +10,19 @@
   .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.4)}
   .modal-inner{background:#fff;padding:1rem;border-radius:8px;max-width:480px}
 </style>
+
+<script>
+  (function(){
+    // Close visible modal on Escape key
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' || e.key === 'Esc'){
+        var modal = document.querySelector('.modal');
+        if(modal && !modal.hasAttribute('hidden')){
+          modal.setAttribute('hidden','');
+          var closeBtn = modal.querySelector('.modal-close');
+          if(closeBtn) closeBtn.focus();
+        }
+      }
+    });
+  })();
+</script>
