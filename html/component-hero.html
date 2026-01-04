@@ -1,12 +1,14 @@
 <!-- component: hero -->
-<section class="hero" data-component="hero" role="region" aria-label="Hero section">
+<section class="hero" data-component="hero" role="region" aria-label="Hero section" data-theme="light">
   <div class="hero-inner">
     <h2>Welcome to our site</h2>
-    <p>Short intro text goes here.</p>
-    <a class="btn" href="#">Get started</a>
+    <p class="caption">Short intro text goes here.</p>
+    <a class="btn" href="#" aria-label="Get started">Get started</a>
   </div>
   <style>
-    .hero{padding:3rem;background:linear-gradient(90deg,#7bdff6,#6a8df6);color:#fff;text-align:center}
+    :root{--hero-accent:#7bdff6}
+    .hero{padding:3rem;background:linear-gradient(90deg,var(--hero-accent),#6a8df6);color:#fff;text-align:center}
+    .caption{opacity:.95}
     .btn{display:inline-block;margin-top:1rem;padding:.5rem 1rem;background:#fff;color:#333;border-radius:6px;text-decoration:none}
   </style>
 </section>
