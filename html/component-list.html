@@ -1,9 +1,13 @@
 <!-- component: list -->
-<ul class="list" data-component="list" aria-label="Simple list">
-  <li>Item one</li>
-  <li>Item two</li>
-  <li>Item three</li>
-</ul>
+<div class="list-wrap" data-component="list">
+  <p class="empty" aria-live="polite" hidden>No items available.</p>
+  <ul class="list" role="list" aria-label="Simple list">
+    <li role="listitem">Item one</li>
+    <li role="listitem">Item two</li>
+    <li role="listitem">Item three</li>
+  </ul>
+</div>
 <style>
   .list{padding:0;margin:0;list-style:disc;margin-left:1.25rem}
+  .empty{color:#666;font-style:italic}
 </style>
